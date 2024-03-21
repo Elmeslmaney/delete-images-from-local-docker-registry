@@ -42,7 +42,7 @@ class DockerImageManager:
             print(f"Error: {e}")
             return None
 
-    def delete_docker_image_registry(self):
+    def list_docker_registry_repos(self):
         url = f"{self.registry_url}/v2/_catalog"
         response = requests.get(url)
         if response.status_code == 200:
@@ -62,5 +62,5 @@ images_to_keep_file = "images_to_keep.txt"
 
 docker_image_manager = DockerImageManager(registry_url)
 docker_image_manager.load_images_to_keep(images_to_keep_file)
-docker_image_manager.delete_docker_image_registry()
+docker_image_manager.list_docker_registry_repos()
 print(docker_image_manager.docker_registry_images)
