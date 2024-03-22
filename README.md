@@ -14,7 +14,6 @@ Save the list of images and remove `managerip:5000/` from each image in the list
 
 ```
 penta-app-resource-center:release.73
-
 ```
 
 Update the `images_to_keep.txt` file with your list of images.
